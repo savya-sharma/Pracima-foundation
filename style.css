@@ -1,11 +1,13 @@
 @font-face {
     font-family: rejouice;
     src: url(./Rejouice-Headline.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: canopee;
     src: url(./canopee.ttf);
+    font-display: swap;
 }
 
 
@@ -22,12 +24,38 @@ html,body{
     height: 100%;
 }
 
+/* hide the scrollbar (page still scrolls) */
+html,body{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: #FDFFFE;
+    -webkit-font-smoothing: antialiased;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+#main{
+    overflow-x: hidden;
+}
+
 
 #page1{
     width: 100%;
     min-height: 100vh;
     background-color: #FDFFFE;
     position: relative;
+    overflow: hidden;
 }
 
 nav {
@@ -43,8 +71,11 @@ nav {
     z-index: 9;
 }
 .logo img{
-    height: 4vh;
-    width: 2vw;
+    height: 2.2vw;
+    width: 2.2vw;
+    min-width: 28px;
+    min-height: 28px;
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -67,10 +98,19 @@ nav ul a{
     color: #000;
     text-decoration: none;
     font-size: 1.3vw;
+    transition: opacity .2s;
 }
 
-.n-right-icon a{
-    text-decoration: none;
+nav ul a:hover{
+    opacity: .6;
+}
+
+.menu-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .n-right-icon i{
@@ -93,10 +133,13 @@ nav ul a{
 #center-heading h1{
     font-size: 4vw;
     width: 35vw;
+    line-height: 1.1;
 }
 
 #center-heading p{
     width: 25vw;
+    position: relative;
+    z-index: 1;
 }
 
 .center-btn{
@@ -117,6 +160,8 @@ nav ul a{
     padding: 12px 25px;
     position: relative;
     z-index: 99;
+    display: inline-block;
+    transition: transform .2s;
 }
 
 .gray-btn a{
@@ -126,9 +171,16 @@ nav ul a{
     padding: 12px 25px;
     display: flex;
     /* align-items: center; */
+    align-items: center;
     gap: 0.3vw;
     position: relative;
     z-index: 99;
+    transition: transform .2s;
+}
+
+.black-btn a:hover,
+.gray-btn a:hover{
+    transform: translateY(-2px);
 }
 
 .anim-circle{
@@ -137,13 +189,12 @@ nav ul a{
     width: 40vw;
     background: linear-gradient(#b5e20056, #b5e20056);
     opacity: .5;
-   border-radius: 50%;
+    border-radius: 50%;
     filter: blur(25px);
     position: absolute;
     left: 30%;
     top: -8vw;
-    border-radius: 50%;
-    position: absolute;
+    pointer-events: none;
 }
 
 #center-btm-img {
@@ -248,6 +299,7 @@ nav ul a{
 
 .blog1-bottom img{
     height: 4vw;
+    width: auto;
 }
 
 .text-wrap h3{
@@ -330,7 +382,7 @@ nav ul a{
     width: 20vw;
     height: 50vh;
     background-color: purple;
-    background-image: url(./images/For\ Melissa\ Alcena\ taking\ portraits\ “has\ given\ me\ an\ insight\ into\ myself\ and\ others”.jpeg);
+    background-image: url(./images/education.jpeg);
     background-position: center;
     background-size: cover;
     color: #fff;
@@ -408,7 +460,8 @@ nav ul a{
 }
 
 .b5-img-wrap img{
-    height: 10vh
+    height: 10vh;
+    width: auto;
 }
 
 .b5-text-wrap h3{
@@ -482,6 +535,7 @@ nav ul a{
 
 .img-blog img{
     height: 20vh;
+    width: auto;
 }
 
 .text-blog{
@@ -522,8 +576,16 @@ nav ul a{
     /* padding: 5vw 3vw; */
   }
 
+  .swiper {
+    padding-right: 3vw;
+    padding-bottom: 50px;
+  }
+
+  .swiper-pagination-bullet-active{
+    background: #043D2B;
+  }
+
   .swiper-slide {
-    width: 20vw;
     height: 70vh;
     font-size: 18px;
     background: #fff;
@@ -536,16 +598,6 @@ nav ul a{
   .swip-wrapper {
     width: 100%;
     height: 100%;
-    /* background-color: purple; */
-    border: 1px solid #00000011;
-    padding: 1vw 1vw;
-    border-radius: 20px
-  }
-
-  .swip-wrapper{
-    width: 100%;
-    /* height: unset; */
-    /* background-color: purple; */
     border: 1px solid #00000011;
     padding: 1vw 1vw;
     border-radius: 20px;
@@ -581,7 +633,7 @@ nav ul a{
 
   .sd-text-section h2{
     letter-spacing: 0.1vw;
-    font-size: vw;
+    font-size: 1.5vw;
   }
   
   .sd-text-section p{
@@ -613,6 +665,7 @@ nav ul a{
     padding: 5px 10px;
     border-radius: 50px;
     opacity: .8;
+    white-space: nowrap;
   }
 
   .medical-btn h5{
@@ -628,9 +681,9 @@ nav ul a{
  #page4{
     width: 100%;
     min-height: 100vh;
-    /* background-color: peru; */
     position: relative;
     padding: 10vw 0;
+    overflow: hidden;
  }
  
 
@@ -644,6 +697,8 @@ nav ul a{
     gap: 5vw;
     position: relative;
     z-index: 9;
+    text-align: center;
+    padding: 0 3vw;
 }
 
 #page4-wrapper h2{
@@ -666,7 +721,7 @@ nav ul a{
     font-size: 1.5vw;
     padding: 1vw 2vw;
     border-radius: 50px;
-
+    display: inline-block;
 }
 
 #page4-overlay {
@@ -771,8 +826,8 @@ nav ul a{
        width: 100%;
 }
 
-#moving-text-row1 { 
-    overflow-x: auto;
+#moving-text-row1 {
+    overflow: hidden;
     white-space: nowrap;
 }
 
@@ -780,7 +835,7 @@ nav ul a{
     display: none;
 }
 
-#slide-way {
+.slide-way {
     /* background-color: lightblue; */
     /* margin-bottom: 10px; */
     white-space: nowrap;
@@ -799,7 +854,7 @@ nav ul a{
 
 
 
-#slide-way i{
+.slide-way i{
     font-size: 5vw;
 }
 
@@ -825,8 +880,8 @@ nav ul a{
     width: 100%;
 }
 
-#moving-text-row2 { 
-    overflow-x: auto;
+#moving-text-row2 {
+    overflow: hidden;
     white-space: nowrap;
 }
 
@@ -834,7 +889,7 @@ nav ul a{
     display: none;
 }
 
-#slide-way-2 {
+.slide-way-2 {
     /* background-color: lightblue; */
     /* margin-bottom: 10px; */
     white-space: nowrap;
@@ -851,7 +906,7 @@ nav ul a{
     font-size: 6vw;
 }
 
-#slide-way-2 i{
+.slide-way-2 i{
     font-size: 5vw;
 }
 
@@ -940,7 +995,12 @@ nav ul a{
     object-fit: cover;
     object-position: 0% 20%;
     border-radius: 20px;
-    filter: grayscale(10);
+    filter: grayscale(1);
+    transition: filter .4s;
+}
+
+.p5-team-card:hover .teammate-img img{
+    filter: grayscale(0);
 }
 
 .teammate-intro h2{
@@ -955,7 +1015,8 @@ nav ul a{
 
 .p5-btm-wrap{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 6vw 0 3vw;
     background-color: #E9E5E3;
     border-radius: 20px;
     display: flex;
@@ -1012,27 +1073,17 @@ nav ul a{
     padding: 0 2vw;
 }
 
-.section1{
-    border-top: 1px solid #00000036;
-    border-bottom: 1px solid #00000036;
-}
-.section2{
-    border-bottom: 1px solid #00000036;
-}
-.section3{
-    border-bottom: 1px solid #00000036;
-}
-.section4{
-    border-bottom: 1px solid #00000036;
-}
-.section5{
-    border-bottom: 1px solid #00000036;
-}
-
-.section1{
+.faq-item{
     display: flex;
     justify-content: space-between;
+    gap: 2vw;
     padding: 1vw 0vw;
+    border-bottom: 1px solid #00000036;
+    cursor: pointer;
+}
+
+.faq-item:first-child{
+    border-top: 1px solid #00000036;
 }
 
 .section-left h2{
@@ -1041,39 +1092,40 @@ nav ul a{
     padding: 1vw 0;
 }
 
+.faq-answer{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .4s ease;
+}
 
-.section-left p{
+.faq-answer p{
+    overflow: hidden;
     font-size: 1vw;
     letter-spacing: 0.1vw;
+    line-height: 1.5;
 }
 
-.section2{
-    display: flex;
-    justify-content: space-between;
-    padding: 1vw 0vw;
+.faq-item.active .faq-answer{
+    grid-template-rows: 1fr;
 }
 
-.section3{
-    display: flex;
-    justify-content: space-between;
-    padding: 1vw 0vw;
+.faq-item.active .faq-answer p{
+    padding-bottom: 1vw;
 }
 
-.section4{
-    display: flex;
-    justify-content: space-between;
-    padding: 1vw 0vw;
+.section-right{
+    padding-top: 1vw;
 }
 
-.section5{
-    display: flex;
-    justify-content: space-between;
-    padding: 1vw 0vw;
-}
-
-#unique i{
+.faq-item i{
     font-size: 1.5vw;
     opacity: .7;
+    display: inline-block;
+    transition: transform .3s ease;
+}
+
+.faq-item.active i{
+    transform: rotate(90deg);
 }
 
 #footer{
@@ -1129,7 +1181,11 @@ nav ul a{
 .section a{
     text-decoration: none;
     color: #ffffffbd;
-    /* font-size: 1.5vw; */
+    transition: color .2s;
+}
+
+.section a:hover{
+    color: #CCFF00;
 }
 
 #footer-bottom{
@@ -1165,3 +1221,102 @@ nav ul a{
     font-size: 1.5vw;
 }
 
+
+/* ---------- loader ---------- */
+.is-loading body{
+    overflow: hidden;
+}
+
+#loader{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #043D2B;
+    color: #FDFFFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vw;
+    overflow: hidden;
+}
+
+.loader-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.loader-top h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5vw;
+}
+
+.loader-top img{
+    width: 2.2vw;
+    height: 2.2vw;
+    min-width: 28px;
+    min-height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.loader-top p{
+    text-align: right;
+    font-size: 1.1vw;
+    line-height: 1.4;
+    opacity: .7;
+}
+
+.loader-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 2vw;
+}
+
+.loader-count{
+    font-family: rejouice;
+    font-size: 14vw;
+    font-weight: 400;
+    line-height: .8;
+    font-variant-numeric: tabular-nums;
+}
+
+.loader-count sup{
+    font-family: rejouice;
+    font-size: .3em;
+    color: #CCFF00;
+    vertical-align: top;
+}
+
+.loader-status{
+    font-size: 1.1vw;
+    letter-spacing: .2vw;
+    text-transform: uppercase;
+    animation: loader-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes loader-pulse{
+    0%, 100% { opacity: .3; }
+    50% { opacity: .9; }
+}
+
+.loader-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #ffffff1a;
+}
+
+#loader-fill{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #CCFF00;
+    transform: scaleX(0);
+    transform-origin: left;
+}

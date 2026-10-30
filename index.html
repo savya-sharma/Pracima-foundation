@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-loading">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pracima - the world's largest social fundraising platform, optimized for your charity in a more easy way.">
     <title>Pracima</title>
-    <link rel="icon" type="image/x-icon" href="./images/logo.jpeg">
+    <link rel="icon" type="image/jpeg" href="./images/logo.jpeg">
+    <link rel="preload" href="./Rejouice-Headline.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./canopee.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- loco css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+    <noscript><style>#loader{display:none}.is-loading body{overflow:auto}</style></noscript>
 </head>
 <body>
 
-    
+    <div id="loader" aria-hidden="true">
+        <div class="loader-top">
+            <h3><img src="./images/logo.jpeg" alt="">Pracima</h3>
+            <p>Great futures are built <br> with a small charity</p>
+        </div>
+        <div class="loader-bottom">
+            <h1 class="loader-count"><span id="loader-num">0</span><sup>%</sup></h1>
+            <p class="loader-status">Loading</p>
+        </div>
+        <div class="loader-line"><span id="loader-fill"></span></div>
+    </div>
+
     <div id="main">
         <div id="page1">
             <nav>
                 <div class="logo">
-                    
-                    <h1><img src="./images/logo.jpeg" alt="">Pracima</h1>
+                    <h1><img src="./images/logo.jpeg" alt="Pracima logo">Pracima</h1>
                 </div>
                     <div class="n-center">
                         <ul>
-                            <a href="#"><li>Home</li></a>
-                            <a href="#"><li>About</li></a>
-                            <a href="#"><li>Resource</li></a>
-                            <a href="#"><li>Contact</li></a>
+                            <li><a href="#page1">Home</a></li>
+                            <li><a href="#page2">About</a></li>
+                            <li><a href="#page3">Resource</a></li>
+                            <li><a href="#footer">Contact</a></li>
                         </ul>
                     </div>
                     <div class="n-right-icon">
-                        <a href="#"><i class="ri-menu-5-line"></i></a>
+                        <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-5-line"></i></button>
                     </div>
             </nav>
             <div class="anim-circle"></div>
              <div id="center-heading">
                 <h1>Great futures are built with a small charity</h1>
-                <p>Thre world's largest socila fundraising platform, optimized for your charity in a more easy way.</p>
+                <p>The world's largest social fundraising platform, optimized for your charity in a more easy way.</p>
                 <div class="center-btn">
                     <div class="black-btn">
                         <a href="#">Download now</a>
@@ -54,18 +66,18 @@
                         <div class="blog1-top">
                             <div class="about-donate">
                             <h1>65%</h1>
-                            <p>17 Thosund People Died,
-                                 Thosunds Injured, Houses 
+                            <p>17 Thousand People Died,
+                                 Thousands Injured, Houses
                                  and Buildings Destroyed,
-                                  TurkySyrla Grleves</p>
+                                  Turkey-Syria Grieves</p>
                                 </div>
                                   <div class="donate-btn">
-                                    <a href="#">Donate now <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="#page3">Donate now <i class="ri-arrow-right-up-line"></i></a>
                                   </div>
                         </div>
                         <div class="blog1-bottom">
                             <div class="img-wrap">
-                                <img src="./images/Pin de Carlos Díaz en Idea Pins by you en 2022 _ Fondos de pantalla de iphone, Fondo de pantalla de gimnasia, Fondo de pantalla oscuros.jpeg" alt="">
+                                <img src="./images/voice-icon.jpeg" alt="">
                             </div>
                             <div class="text-wrap">
                                 <h3>Let them <br> be heard</h3>
@@ -85,7 +97,7 @@
                             <h1>Join 500+ <br> people Donate</h1>
                         </div>
                         <div class="blog3-join-btn">
-                            <a href="#">Join community <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#page4">Join community <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                     <div class="blog4">
@@ -94,13 +106,13 @@
                         </div>
                         <div class="blog4-bottom">
                             <h2>Sponsor food, <br> education to <br>
-                            Orphans kenya</h2>
+                            Orphans in Kenya</h2>
                         </div>
                     </div>
                     <div class="blog5">
                         <div class="blog5-top">
                             <div class="explore-btn">
-                                <a href="#">Explore more <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="#page3">Explore more <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                         <div class="blog5-bottom">
@@ -128,7 +140,7 @@
                         </div>
                         <div class="text-blog">
                             <h2>Give Happiness</h2>
-                            <p>Giving happiness to other is one <br> of the most fuldilling things you <br> can do in life.</p>
+                            <p>Giving happiness to others is one <br> of the most fulfilling things you <br> can do in life.</p>
                         </div>
                     </div>
                     <div class="card-wrap">
@@ -137,7 +149,7 @@
                         </div>
                         <div class="text-blog">
                             <h2>Share Love</h2>
-                            <p>When you share love with those <br> around you, create a ripple <br> effeect of kindness.</p>
+                            <p>When you share love with those <br> around you, you create a ripple <br> effect of kindness.</p>
                         </div>
                     </div>
                     <div class="card-wrap">
@@ -145,8 +157,8 @@
                             <img src="./images/image_2024-05-03_113743627-removebg-preview.png" alt="">
                         </div>
                         <div class="text-blog">
-                            <h2>Give Happiness</h2>
-                            <p>Building socially requires not just <br> connecting with others, but also <br> actively contributing</p>
+                            <h2>Build Community</h2>
+                            <p>Building socially requires not just <br> connecting with others, but also <br> actively contributing.</p>
                         </div>
                     </div>
                 </div>
@@ -157,112 +169,112 @@
             <div id="page3-wrapper">
                 <h1>Fundraisers In Extreme Need</h1>
                 <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="swip-wrapper">
-        <div class="sd-img-section">
-            <img src="https://i.pinimg.com/564x/cb/59/0f/cb590f0faef71e8e64faee5de54a47a4.jpg" alt="">
-        </div>
-        <div class="sd-text-section">
-            <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
-            <p>Since 2006, SOIL has been working in urban...</p>
-            <h4>$90,294 <span>raised of %100,000 goal</span></h4>
-            <div class="goal-row"></div>
-            <div class="medical-btn">
-                <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
-                <a href="#">Medical</a>
-            </div>
-        </div>
-    </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swip-wrapper">
-            <div class="sd-img-section">
-                <img src="https://i.pinimg.com/564x/46/29/57/4629572ef566a53397113e9ab3dd49bb.jpg" alt="">
-            </div>
-            <div class="sd-text-section">
-                <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
-                <p>Since 2006, SOIL has been working in urban...</p>
-                <h4>$90,294 <span>raised of %100,000 goal</span></h4>
-                <div class="goal-row"></div>
-                <div class="medical-btn">
-                    <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
-                    <a href="#">Medical</a>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swip-wrapper">
+                                <div class="sd-img-section">
+                                    <img src="https://i.pinimg.com/564x/cb/59/0f/cb590f0faef71e8e64faee5de54a47a4.jpg" alt="Fundraiser">
+                                </div>
+                                <div class="sd-text-section">
+                                    <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
+                                    <p>Since 2006, SOIL has been working in urban...</p>
+                                    <h4>$90,294 <span>raised of $100,000 goal</span></h4>
+                                    <div class="goal-row"></div>
+                                    <div class="medical-btn">
+                                        <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
+                                        <a href="#">Medical</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swip-wrapper">
+                                <div class="sd-img-section">
+                                    <img src="https://i.pinimg.com/564x/46/29/57/4629572ef566a53397113e9ab3dd49bb.jpg" alt="Fundraiser">
+                                </div>
+                                <div class="sd-text-section">
+                                    <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
+                                    <p>Since 2006, SOIL has been working in urban...</p>
+                                    <h4>$90,294 <span>raised of $100,000 goal</span></h4>
+                                    <div class="goal-row"></div>
+                                    <div class="medical-btn">
+                                        <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
+                                        <a href="#">Medical</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swip-wrapper">
+                                <div class="sd-img-section">
+                                    <img src="https://i.pinimg.com/564x/dd/30/26/dd30266a67fbedd28fb8371dd36258fa.jpg" alt="Fundraiser">
+                                </div>
+                                <div class="sd-text-section">
+                                    <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
+                                    <p>Since 2006, SOIL has been working in urban...</p>
+                                    <h4>$90,294 <span>raised of $100,000 goal</span></h4>
+                                    <div class="goal-row"></div>
+                                    <div class="medical-btn">
+                                        <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
+                                        <a href="#">Medical</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swip-wrapper">
+                                <div class="sd-img-section">
+                                    <img src="https://i.pinimg.com/564x/2e/56/94/2e56947d15e0c15d1dfdb091850fe680.jpg" alt="Fundraiser">
+                                </div>
+                                <div class="sd-text-section">
+                                    <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
+                                    <p>Since 2006, SOIL has been working in urban...</p>
+                                    <h4>$90,294 <span>raised of $100,000 goal</span></h4>
+                                    <div class="goal-row"></div>
+                                    <div class="medical-btn">
+                                        <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
+                                        <a href="#">Medical</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swip-wrapper">
+                                <div class="sd-img-section">
+                                    <img src="https://i.pinimg.com/564x/0a/1a/85/0a1a856dae71dcf3cb42158d6e9e4733.jpg" alt="Fundraiser">
+                                </div>
+                                <div class="sd-text-section">
+                                    <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
+                                    <p>Since 2006, SOIL has been working in urban...</p>
+                                    <h4>$90,294 <span>raised of $100,000 goal</span></h4>
+                                    <div class="goal-row"></div>
+                                    <div class="medical-btn">
+                                        <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
+                                        <a href="#">Medical</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swip-wrapper">
+                                <div class="sd-img-section">
+                                    <img src="https://i.pinimg.com/564x/82/6a/aa/826aaa4c02f33a13ba15774800c015cf.jpg" alt="Fundraiser">
+                                </div>
+                                <div class="sd-text-section">
+                                    <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
+                                    <p>Since 2006, SOIL has been working in urban...</p>
+                                    <h4>$90,294 <span>raised of $100,000 goal</span></h4>
+                                    <div class="goal-row"></div>
+                                    <div class="medical-btn">
+                                        <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
+                                        <a href="#">Medical</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-            </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swip-wrapper">
-            <div class="sd-img-section">
-                <img src="https://i.pinimg.com/564x/dd/30/26/dd30266a67fbedd28fb8371dd36258fa.jpg" alt="">
-            </div>
-            <div class="sd-text-section">
-                <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
-                <p>Since 2006, SOIL has been working in urban...</p>
-                <h4>$90,294 <span>raised of %100,000 goal</span></h4>
-                <div class="goal-row"></div>
-                <div class="medical-btn">
-                    <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
-                    <a href="#">Medical</a>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swip-wrapper">
-            <div class="sd-img-section">
-                <img src="https://i.pinimg.com/564x/2e/56/94/2e56947d15e0c15d1dfdb091850fe680.jpg" alt="">
-            </div>
-            <div class="sd-text-section">
-                <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
-                <p>Since 2006, SOIL has been working in urban...</p>
-                <h4>$90,294 <span>raised of %100,000 goal</span></h4>
-                <div class="goal-row"></div>
-                <div class="medical-btn">
-                    <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
-                    <a href="#">Medical</a>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swip-wrapper">
-            <div class="sd-img-section">
-                <img src="https://i.pinimg.com/564x/0a/1a/85/0a1a856dae71dcf3cb42158d6e9e4733.jpg" alt="">
-            </div>
-            <div class="sd-text-section">
-                <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
-                <p>Since 2006, SOIL has been working in urban...</p>
-                <h4>$90,294 <span>raised of %100,000 goal</span></h4>
-                <div class="goal-row"></div>
-                <div class="medical-btn">
-                    <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
-                    <a href="#">Medical</a>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swip-wrapper">
-            <div class="sd-img-section">
-                <img src="https://i.pinimg.com/564x/82/6a/aa/826aaa4c02f33a13ba15774800c015cf.jpg" alt="">
-            </div>
-            <div class="sd-text-section">
-                <h2>Help Turkey and Syria <br> Earthquake Relief Fund</h2>
-                <p>Since 2006, SOIL has been working in urban...</p>
-                <h4>$90,294 <span>raised of %100,000 goal</span></h4>
-                <div class="goal-row"></div>
-                <div class="medical-btn">
-                    <h5><i class="ri-heart-fill"></i>10,580 Supporters</h5>
-                    <a href="#">Medical</a>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
             </div>
         </div>
 
@@ -277,13 +289,11 @@
                     </div>
                 </div>
                 <div class="p4-overlay-bottom-section">
-                    <div class="p4-overlay-bottom-section">
-                        <div class="p4-btm-overlay-left">
-                            <img src="https://i.pinimg.com/564x/44/43/6f/44436fce07c9c809bc5748219bd9e3e9.jpg" alt="">
-                        </div>
-                        <div class="p4-btm-overlay-right">
-                            <img src="https://i.pinimg.com/564x/44/43/6f/44436fce07c9c809bc5748219bd9e3e9.jpg" alt="">
-                        </div>
+                    <div class="p4-btm-overlay-left">
+                        <img src="https://i.pinimg.com/564x/44/43/6f/44436fce07c9c809bc5748219bd9e3e9.jpg" alt="">
+                    </div>
+                    <div class="p4-btm-overlay-right">
+                        <img src="https://i.pinimg.com/564x/44/43/6f/44436fce07c9c809bc5748219bd9e3e9.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -292,122 +302,118 @@
                 <h1>120,859+</h1>
                 <p>people already joining</p>
                 <div class="join-communty-btn">
-                    <a href="#">Yes, i want to join community</a>
+                    <a href="#">Yes, I want to join community</a>
                 </div>
             </div>
-            
+
             <div id="moving-text-wrapper">
-            <div id="page4-btm-moving-left-text">
-            <div id="moving-text-row1">
-                <div id="slide-way">
-                  <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                     <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                   <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
+                <div id="page4-btm-moving-left-text">
+                    <div id="moving-text-row1">
+                        <div class="slide-way">
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                        </div>
+                        <div class="slide-way">
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                        </div>
+                        <div class="slide-way">
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="slide-way">
-                  <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                     <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                   <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                </div>
+                <!-- right moving text -->
 
-                <div id="slide-way">
-                  <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                     <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                   <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- left moving text -->
-
-        <div id="page4-btm-moving-right-text">
-            <div id="moving-text-row2">
-                <div id="slide-way-2">
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                </div>
-
-                <div id="slide-way-2">
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                </div>
-
-                <div id="slide-way-2">
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
-                    <h1>let's help each other</h1> 
-                    <i class="ri-asterisk"></i>
+                <div id="page4-btm-moving-right-text">
+                    <div id="moving-text-row2">
+                        <div class="slide-way-2">
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                        </div>
+                        <div class="slide-way-2">
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                        </div>
+                        <div class="slide-way-2">
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                            <h1>let's help each other</h1>
+                            <i class="ri-asterisk"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
         </div>
 
         <div id="page5">
             <div id="page5-wrapper">
                 <h1>Meet our team</h1>
-                <p>The world's largest social fundraising plateform,optimized <br> for your charity in a more easy way</p>
+                <p>The world's largest social fundraising platform, optimized <br> for your charity in a more easy way</p>
             </div>
             <div class="p5-card-wrapper">
                 <div id="p5-cd-wrapper">
-                <div class="p5-team-card">
-                    <div class="teammate-img">
-                        <img src="./images/antonio roberto.jpeg" alt="">
+                    <div class="p5-team-card">
+                        <div class="teammate-img">
+                            <img src="./images/antonio-roberto.jpeg" alt="Antonio Roberto">
+                        </div>
+                        <div class="teammate-intro">
+                            <h2>Antonio Roberto</h2>
+                            <span>Founder Pracima</span>
+                        </div>
                     </div>
-                    <div class="teammate-intro">
-                        <h2>Antonio Roberto</h2>
-                        <span>Founder Pracima</span>
+                    <div class="p5-team-card">
+                        <div class="teammate-img">
+                            <img src="./images/patricia-angely.jpeg" alt="Patricia Angely">
+                        </div>
+                        <div class="teammate-intro">
+                            <h2>Patricia Angely</h2>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                    <div class="p5-team-card">
+                        <div class="teammate-img">
+                            <img src="./images/sonia-ambaratna.jpeg" alt="Sonia Ambaratna">
+                        </div>
+                        <div class="teammate-intro">
+                            <h2>Sonia Ambaratna</h2>
+                            <span>Lead Marketing</span>
+                        </div>
+                    </div>
+                    <div class="p5-team-card">
+                        <div class="teammate-img">
+                            <img src="./images/yasmine-tano.jpeg" alt="Yasmine Tano">
+                        </div>
+                        <div class="teammate-intro">
+                            <h2>Yasmine Tano</h2>
+                            <span>Creative Designer</span>
+                        </div>
                     </div>
                 </div>
-                <div class="p5-team-card">
-                    <div class="teammate-img">
-                        <img src="./images/patricia angely.jpeg" alt="">
-                    </div>
-                    <div class="teammate-intro">
-                        <h2>Patricia Angely</h2>
-                        <span>Product Manager</span>
-                    </div>
-                </div>
-                <div class="p5-team-card">
-                    <div class="teammate-img">
-                        <img src="./images/sonia ambaratna.jpeg" alt="">
-                    </div>
-                    <div class="teammate-intro">
-                        <h2>Sonia Ambaratna</h2>
-                        <span>Lead Marketing</span>
-                    </div>
-                </div>
-                <div class="p5-team-card">
-                    <div class="teammate-img">
-                        <img src="./images/yasmine tano.jpeg" alt="">
-                    </div>
-                    <div class="teammate-intro">
-                        <h2>Yasmine Tano</h2>
-                        <span>Creative Designer</span>
-                    </div>
-                </div>
-                </div>
-        </div>
+            </div>
             <div id="p5-bottom-wrapper">
                 <div class="p5-btm-wrap">
                     <div class="btm-top-wrap">
@@ -415,49 +421,63 @@
                             <img src="./images/image_2024-05-04_181404073-removebg-preview.png" alt="">
                         </div>
                         <h1>Frequently asked questions</h1>
-                        <p>Have another question? Emall is at <span><a href="#">pracima.help@gmail.com</a></span></p>
+                        <p>Have another question? Email us at <span><a href="mailto:pracima.help@gmail.com">pracima.help@gmail.com</a></span></p>
                     </div>
                     <div class="btm-bottom-wrap">
-                        <div id="unique" class="section1">
+                        <div class="faq-item active">
                             <div class="section-left">
-                            <h2>What types of charities can I donate to, and how do I find them?</h2>
-                            <p>There are many types of charities out there, ranging from local organizations to large international ones. <br> You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                        </div>
-                        <div class="section-right">
-                            <i class="ri-arrow-down-circle-line"></i>
-                        </div>
-                        </div>
-
-                        <div id="unique" class="section2">
-                            <div class="section-left">
-                                <h2>Is my donation tax-deductible, and how i claim ot on my taxes?</h2>
+                                <h2>What types of charities can I donate to, and how do I find them?</h2>
+                                <div class="faq-answer">
+                                    <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
+                                </div>
                             </div>
                             <div class="section-right">
                                 <i class="ri-arrow-right-circle-line"></i>
                             </div>
                         </div>
 
-                        <div id="unique" class="section3">
+                        <div class="faq-item">
+                            <div class="section-left">
+                                <h2>Is my donation tax-deductible, and how do I claim it on my taxes?</h2>
+                                <div class="faq-answer">
+                                    <p>It depends on the charity's registration and the tax rules in your country. Every donation on Pracima comes with a receipt you can keep for your records and share with your tax advisor.</p>
+                                </div>
+                            </div>
+                            <div class="section-right">
+                                <i class="ri-arrow-right-circle-line"></i>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
                             <div class="section-left">
                                 <h2>Can I donate anonymously?</h2>
+                                <div class="faq-answer">
+                                    <p>Yes. When you donate you can choose to hide your name, so only the amount is shown publicly on the fundraiser.</p>
+                                </div>
                             </div>
                             <div class="section-right">
                                 <i class="ri-arrow-right-circle-line"></i>
                             </div>
                         </div>
 
-                        <div id="unique" class="section4">
+                        <div class="faq-item">
                             <div class="section-left">
-                                <h2>What prercentage of my donation actually goes to the charity for administrative?</h2>
+                                <h2>What percentage of my donation actually goes to the charity after administrative costs?</h2>
+                                <div class="faq-answer">
+                                    <p>Each fundraiser page shows how funds are used. Most charities publish yearly reports that break down programme and administrative spending.</p>
+                                </div>
                             </div>
                             <div class="section-right">
                                 <i class="ri-arrow-right-circle-line"></i>
                             </div>
                         </div>
 
-                        <div id="unique" class="section5">
+                        <div class="faq-item">
                             <div class="section-left">
                                 <h2>Can I donate goods or services instead of money?</h2>
+                                <div class="faq-answer">
+                                    <p>Many charities accept goods, food or volunteer time. Check the fundraiser page or contact the charity directly to see what they need most.</p>
+                                </div>
                             </div>
                             <div class="section-right">
                                 <i class="ri-arrow-right-circle-line"></i>
@@ -468,56 +488,51 @@
             </div>
 
             <div id="footer">
-            <div id="footer-wrapper">
-                <div id="footer-top">
-                    <div class="footer-top-left">
-                        <h2>Pracima</h2>
-                        <p>Great futures are build with a small sharity</p>
-                    </div>
-                    <div class="footer-top-right">
-                        <div class="section">
-                            <ul>
-                                <a href="#"><li>Our Work</li></a>
-                                <a href="#"><li>Our Story</li></a>
-                                <a href="#"><li>Partner with Us</li></a>
-                            </ul>
+                <div id="footer-wrapper">
+                    <div id="footer-top">
+                        <div class="footer-top-left">
+                            <h2>Pracima</h2>
+                            <p>Great futures are built with a small charity</p>
                         </div>
-                        <div class="section">
-                             <ul>
-                                <a href="#"><li>Our Work</li></a>
-                                <a href="#"><li>Our Story</li></a>
-                                <a href="#"><li>Partner with Us</li></a>
-                            </ul>
-                        </div>
-                        <div class="section">
-                            <ul>
-                                <a href="#"><li>Our Work</li></a>
-                                <a href="#"><li>Our Story</li></a>
-                                <a href="#"><li>Partner with Us</li></a>
-                            </ul>
+                        <div class="footer-top-right">
+                            <div class="section">
+                                <ul>
+                                    <li><a href="#">Our Work</a></li>
+                                    <li><a href="#">Our Story</a></li>
+                                    <li><a href="#">Partner with Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="section">
+                                <ul>
+                                    <li><a href="#page3">Fundraisers</a></li>
+                                    <li><a href="#page4">Community</a></li>
+                                    <li><a href="#page5">Our Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="section">
+                                <ul>
+                                    <li><a href="#p5-bottom-wrapper">FAQ</a></li>
+                                    <li><a href="mailto:pracima.help@gmail.com">Contact</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="footer-bottom">
-                    <div class="footer-bottom-left">
-                        <p>c 2024Copyright.aziemelasari</p>
-                    </div>
-                    <div class="footer-bottom-rigth">
-                        <a href="#">Donate now <i class="ri-arrow-right-up-line"></i></a>
+                    <div id="footer-bottom">
+                        <div class="footer-bottom-left">
+                            <p>&copy; 2024 Copyright. aziemelasari</p>
+                        </div>
+                        <div class="footer-bottom-rigth">
+                            <a href="#page3">Donate now <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </div>
 
-    
-    
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- loco js -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>
