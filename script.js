@@ -11,6 +11,37 @@ function scrollToEl(target) {
   else target.scrollIntoView();
 }
 
+// navbar: hide on scroll down, show on scroll up
+const nav = document.querySelector("nav");
+let lastY = window.scrollY;
+let ticking = false;
+
+new ResizeObserver(() => {
+  document.documentElement.style.setProperty("--nav-h", `${nav.offsetHeight}px`);
+}).observe(nav);
+
+function updateNav() {
+  const y = window.scrollY;
+  const delta = y - lastY;
+
+  if (y <= nav.offsetHeight) {
+    nav.classList.remove("nav-hidden"); // always visible near the top
+  } else if (delta > 6) {
+    nav.classList.add("nav-hidden");
+  } else if (delta < -6) {
+    nav.classList.remove("nav-hidden");
+  }
+  nav.classList.toggle("nav-scrolled", y > 10);
+
+  if (Math.abs(delta) > 6) lastY = y;
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) requestAnimationFrame(updateNav);
+  ticking = true;
+}, { passive: true });
+
 // fundraiser slider
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1.15,
@@ -57,6 +88,7 @@ function heroIntro() {
     duration: 0.8,
     stagger: 0.12,
     ease: "power3.out",
+    clearProps: "transform,opacity", // hand the nav's transform back to the hide/show css
   });
   gsap.from(".center-img-wrapper > div", {
     y: 60,
