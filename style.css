@@ -105,19 +105,6 @@ nav ul a:hover{
     opacity: .6;
 }
 
-.menu-btn{
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.n-right-icon i{
-    font-size: 2vw;
-    text-decoration: none;
-    color: #000;
-}
 
 #center-heading{
     width: 100%;

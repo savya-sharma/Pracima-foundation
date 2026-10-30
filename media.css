@@ -60,10 +60,6 @@
         font-size: 16px;
     }
 
-    .n-right-icon i{
-        font-size: 26px;
-    }
-
     /* hero */
     .anim-circle{
         width: 70vw;
@@ -614,47 +610,17 @@
         font-size: 12px;
     }
 
-    /* nav -> dropdown menu */
+    /* nav */
     nav{
         padding: 12px 16px;
     }
 
-    .n-center{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #FDFFFE;
-        border-bottom: 1px solid #5656561f;
-        box-shadow: 0 12px 24px #0000000d;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity .3s, transform .3s, visibility .3s;
-    }
-
-    nav.menu-open .n-center{
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
     nav ul{
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 8px 16px 16px;
+        gap: 18px;
     }
 
-    nav ul li a{
-        display: block;
-        padding: 14px 4px;
-        font-size: 18px;
-        border-bottom: 1px solid #5656561a;
-    }
-
-    nav ul li:last-child a{
-        border-bottom: none;
+    nav ul a{
+        font-size: 15px;
     }
 
     /* hero */
@@ -788,6 +754,17 @@
 
     .logo h1{
         font-size: 20px;
+    }
+
+    /* logo on top, links centred underneath */
+    nav{
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 16px 10px;
+    }
+
+    nav ul{
+        gap: 20px;
     }
 
     #center-heading h1{

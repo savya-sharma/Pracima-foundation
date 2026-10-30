@@ -27,19 +27,6 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-// mobile menu
-const nav = document.querySelector("nav");
-const menuBtn = document.querySelector(".menu-btn");
-
-function setMenu(open) {
-  nav.classList.toggle("menu-open", open);
-  menuBtn.setAttribute("aria-expanded", open);
-  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  menuBtn.querySelector("i").className = open ? "ri-close-line" : "ri-menu-5-line";
-}
-
-menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("menu-open")));
-
 // in-page links glide with lenis
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -48,7 +35,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const target = document.querySelector(id);
     if (!target) return;
     e.preventDefault();
-    setMenu(false);
     scrollToEl(target);
   });
 });
